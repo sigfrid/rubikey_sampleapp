@@ -1,1 +1,17 @@
-Hello world !!!
+<form action="/yubikey" method="POST">
+  <div>
+    <label for="yubikey">YubiKey</label>
+    <div>
+      <input type="text" id="yubikey " placeholder="yubikey" name='yubikey'>
+    </div>
+    <div>
+      <button type="submit">SUBMIT</button>
+    </div>
+  </div>
+</form>
+
+<div>
+  <% if @key %>
+    <%= @key %>
+  <% end %>
+</div>

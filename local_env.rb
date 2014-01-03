@@ -2,7 +2,7 @@ module LocalEnv
   require 'yaml'
 
   def api_id
-    p env_file['api_id']
+    env_file['api_id']
   end
 
   def api_key

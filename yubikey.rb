@@ -9,12 +9,10 @@
     end
 
     post '/yubikey' do
-      otp = params[:yubikey]
-
-      rsp = Yubikey::OTP::Verify.new(   api_id: api_id,
-                                        api_key: api_key,
-                                        otp: otp )
-       @key = rsp.status
+      opt = Rubikey::OTP.new(params[:yubikey])
+      authentication = opt.authenticate(api_id: api_id, api_key: api_key)
+      
+      @status = authentication.status
 
       erb :index
     end

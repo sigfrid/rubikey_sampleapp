@@ -1,6 +1,18 @@
+GIT
+  remote: git@github.com:sigfrid/rubikey.git
+  revision: 3ac4cb860fa2ff1b18552445415dd79e4b3859e5
+  specs:
+    rubikey (0.0.1)
+      httparty (~> 0.12.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
+    multi_xml (0.5.5)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -9,11 +21,10 @@ GEM
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
-    yubikey (1.3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rubikey!
   sinatra
-  yubikey

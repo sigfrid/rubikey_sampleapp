@@ -2,4 +2,4 @@
 source "http://rubygems.org/"
 
 gem "sinatra" 
-gem 'yubikey'
+gem 'rubikey', git: 'git@github.com:sigfrid/rubikey.git' 
